@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body style="margin: 0; overflow: hidden;">
+
+
+    <a-scene embedded arjs="sourceType: webcam;">
+
+        <a-marker type="pattern" url="suite_master.patt">
+            <a-image src="suite_master.jpg" rotation="-90 0 0" scale="7 7 7"></a-image>
+        </a-marker>
+
+        <a-marker type="pattern" url="quarto_1.patt">
+            <a-image src="quarto_1.jpg" rotation="-90 0 0" scale="7 7 7"></a-image>
+        </a-marker>
+
+        <a-marker type="pattern" url="cozinha.patt">
+            <a-image src="cozinha.jpg" rotation="-90 0 0" scale="7 7 7"></a-image>
+        </a-marker>
+
+        <a-marker type="hiro">
+            <a-gltf-model src="casa_neoclassica.glb" rotation="0 -90 0" scale="0.004 0.004 0.004"
+                position="0.8 -0.10 -0.50"></a-gltf-model>
+        </a-marker>
+
+        <!-- <a-marker type="hiro">
+            <a-box color="red" depth="1" height="1" width="1"></a-box>
+        </a-marker> -->
+
+
+
+        <a-entity camera></a-entity>
+
+    </a-scene>
+
+    <!-- <a-scene
+      vr-mode-ui="enabled: false"
+      embedded
+      arjs="sourceType: webcam; trackingMethod: best; debugUIEnabled: false;">
+
+     -20.540508, -47.396634
+
+      <a-entity gps-entity-place="latitude: -20.540508; longitude: -47.396634; altitude: 0;">
+        <a-gltf-model 
+          src="build.glb"
+          scale="1 1 1"
+          rotation="0 180 0"
+          look-at="[gps-camera]"
+        ></a-gltf-model>
+      </a-entity>
+
+      <a-camera gps-camera rotation-reader></a-camera>
+
+    </a-scene> -->
+
+
+
+</body>
+
+</html>
